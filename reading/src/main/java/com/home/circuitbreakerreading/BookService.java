@@ -15,7 +15,7 @@ public class BookService{
         this.restTemplate = rest;
     }
 
-    @HystrixComman(fallbackMethod = "reliable")
+    @HystrixCommand(fallbackMethod = "reliable")
     public String readingList(){
         URI uri= URI.create("http://localhsot:8090/recommended");
         
